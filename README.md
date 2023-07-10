@@ -1,2 +1,14 @@
 # OpenParlDataCH
-  We are collaboratively building an open standard and API for Swiss parliamentary data.
+We are collaboratively building an open standard and API for Swiss parliamentary data.
+
+## Meeting log
+Latest meeting first.
+
+### 2023-07-03
+#### Agenda with goals
+1. Tie in to the kick-off: common goal is defined
+2. Group obstacles and weight them: What we need to address is clear
+3. Funding possibilities are collected
+4. Proceeding till the end of September has consent 
+5. How we work together is clarified
+#### Notes with actions
