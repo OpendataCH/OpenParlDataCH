@@ -25,8 +25,8 @@ Latest meeting first.
    * voting behaviour
    * vested interests (Confederation; .. and cantons if available)
 * API: rate limit?
-2. Obstacles <b>
-  a. General <b>
+2. Obstacles <br>
+  a. General <br>
 * Finanzierung
   b. Data standard
 * bestimmmte Daten-Entitäten fehlen je Kt.
