@@ -28,20 +28,22 @@ Latest meeting first.
 2. **Obstacles** <br>
   a. General
 * Finanzierung
+<br>
   b. Data standard <br>
 * bestimmmte Daten-Entitäten fehlen je Kt.
 * teilweise keine Historie verfügbar
 * VD stallt nicht `Geschaeft` ins Zentrum, sondern `Event`  
-  c. API
+<br>
+c. API
 * Performance: rate limit?
 * Wer liefert die strukturierten Daten: Civic Tech Akteure, Parlamentsdienste ..
 * Zeithorizont
 * Wer leistet inhaltlichen Support: Fragen, Anomalien, Bugs ..
-3. Funding
+3. Funding <br>
 * Welche Akteure mit Gravitas wollen das fördern:
    * Staatsschreiberkonferenz
    * Parlamentarische Vorstösse
    * SRF/SRGSSR ?
-4. Proceeding
+4. Proceeding <br>
 * Working group 'Data standard'
 * Workimng group 'Civic tech actor agreements' / 'Organisational form'
