@@ -25,3 +25,23 @@ Latest meeting first.
    * voting behaviour
    * vested interests (Confederation; .. and cantons if available)
 * API: rate limit?
+2. Obstacles
+  a. General
+* Finanzierung
+  b. Data standard
+* bestimmmte Daten-Entitäten fehlen je Kt.
+* teilweise keine Historie verfügbar
+* VD stallt nicht `Geschaeft` ins Zentrum, sondern `Event`  
+  c. API
+* Performance: rate limit?
+* Wer liefert die strukturierten Daten: Civic Tech Akteure, Parlamentsdienste ..
+* Zeithorizont
+* Wer leistet inhaltlichen Support: Fragen, Anomalien, Bugs ..
+3. Funding
+* Welche Akteure mit Gravitas wollen das fördern:
+   * Staatsschreiberkonferenz
+   * Parlamentarische Vorstösse
+   * SRF/SRGSSR ?
+4. Proceeding
+* Working group 'Data standard'
+* Workimng group 'Civic tech actor agreements' / 'Organisational form'
