@@ -12,7 +12,7 @@ Latest meeting first.
 4. Proceeding till the end of September has consent 
 5. How we work together is clarified
 #### Results / discussion items
-1. `We make harmonised Swiss parliamentary data accessible as an open web service.`
+1. **Common goal** `We make harmonised Swiss parliamentary data accessible as an open web service.`
 * not only as a service, but also as a bulk download
 * better "federated"
 * caveat to 'free': pure DB yes / more: no
@@ -25,10 +25,10 @@ Latest meeting first.
    * voting behaviour
    * vested interests (Confederation; .. and cantons if available)
 * API: rate limit?
-2. Obstacles <br>
+2. **Obstacles** <br>
   a. General <br>
-* Finanzierung
-  b. Data standard
+* Finanzierung <br>
+  b. Data standard <br>
 * bestimmmte Daten-Entitäten fehlen je Kt.
 * teilweise keine Historie verfügbar
 * VD stallt nicht `Geschaeft` ins Zentrum, sondern `Event`  
