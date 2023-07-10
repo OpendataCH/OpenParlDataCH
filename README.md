@@ -12,7 +12,7 @@ Latest meeting first.
 4. Proceeding till the end of September has consent 
 5. How we work together is clarified
 #### Notes with actions
-1. "We make harmonised Swiss parliamentary data accessible as an open web service."
+1. common goal: "We make harmonised Swiss parliamentary data accessible as an open web service."
 Feedbacks:
 * not only as a service, but also as a bulk download
 * better "federated"
