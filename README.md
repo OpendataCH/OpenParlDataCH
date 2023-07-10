@@ -13,3 +13,16 @@ Latest meeting first.
 5. How we work together is clarified
 #### Notes with actions
 1. "We make harmonised Swiss parliamentary data accessible as an open web service."
+Feedbacks:
+* not only as a service, but also as a bulk download
+* better "federated"
+* caveat to 'free': pure DB yes / more: no
+* caveat: what data are we talking about; calculated data, too?
+   * no caculated values; nothing that is derived
+   * only if already structured available
+* the data that the parliaments already publish, but fundamentally normalised:
+   * parliamentarians with ID, party, commission ..
+   * Parliamentary affairs with ID, title, description ..
+   * voting behaviour
+   * vested interests (Confederation; .. and cantons if available)
+* API: rate limit?
