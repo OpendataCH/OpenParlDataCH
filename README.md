@@ -1,48 +1,47 @@
 # OpenParlDataCH
-We are collaboratively building an open standard and API for Swiss parliamentary data.
+Among municipalities, cantons and the national level there’s a variety of different structures and quality for parliamentary data. [Some data is not machine-readable, some are not fully accurate, some lack documentation and data is hardly comparable](https://docs.google.com/spreadsheets/d/1cHF9qOHYoOcumw03d29mb90T_Elc8aHQrMCEsML88lk/edit?usp=sharing). Political monitoring and analysis tools need to update their crawlers for the same parliamentary websites and clean the same data, rather than focusing on their core competencies. Interoperability across the three levels of government is not guaranteed, with negative consequences for the legislative and executive branches themselves. A data standard to which smaller cantons and municipalities in particular could orient themselves is not in sight.
 
-## Meeting log
-Latest meeting first.
+As a citizen, I would like to be able to follow a specific topic or parliamentary affair from A to Z. For our democracy to work, we need an overview of the political agenda and how parliamentarians have voted. To achieve this, we bring together people from different backgrounds (business, civil society, governments, parliaments, academia), use synergies and collaboratively work towards an open standard and an open API for parliamentary data across all federal levels. In short: **We make harmonized Swiss parliamentary data accessible as an open web service.**
 
-### 2023-07-03
-#### Agenda, goals
-- Tie in to the kick-off: common goal is defined
-- Group obstacles and weight them: What we need to address is clear
-- Funding possibilities are collected
-- Proceeding till the end of September has consent 
-- How we work together is clarified
-#### Results / discussion items
-- **Common goal** `We make harmonised Swiss parliamentary data accessible as an open web service.`
-   - not only as a service, but also as a bulk download
-   - better "federated"
-   - caveat to 'free': pure DB yes / more: no
-   - caveat: what data are we talking about; calculated data, too?
-      - no caculated values; nothing that is derived
-      - only if already structured available
-   - the data that the parliaments already publish, but fundamentally normalised:
-      - parliamentarians with ID, party, commission ..
-      - Parliamentary affairs with ID, title, description ..
-      - voting behaviour
-      - vested interests (Confederation; .. and cantons if available)
-   - API: rate limit?
-- **Obstacles**
-   - General: Finanzierung
-   - Data standard
-      - bestimmmte Daten-Entitäten fehlen je Kt.
-      - teilweise keine Historie verfügbar
-      - VD stallt nicht `Geschaeft` ins Zentrum, sondern `Event`
-   - API
-      - Performance: rate limit?
-      - Wer liefert die strukturierten Daten: Civic Tech Akteure, Parlamentsdienste ..
-      - Zeithorizont
-      - Wer leistet inhaltlichen Support: Fragen, Anomalien, Bugs ..
-- **Funding**
-   - Welche Akteure mit Gravitas wollen das fördern:
-      - Staatsschreiberkonferenz
-      - Parlamentarische Vorstösse
-      - SRF/SRGSSR?
-- **Proceeding**
-   - Working group 'Data standard'
-   - Working group 'Civic tech actor agreements' / 'Organisational form'
-- **Comms, tools**
-   - GitHub Repo
+## Our service should…
+* obtain already machine-readable and up-to-date information from the source (e.g. parliamentary service API) and harmonize it.
+* make non machine readable information published by the parliamentary services machine readable and harmonize it.
+* follow an Open, collaboratively defined standard taking into account international good practices like [OParl](https://github.com/OParl) and (if possible) involve [eCH](https://www.ech.ch/)
+* be federated.
+* provide Open Data.
+* publish only information that is already available.
+* provide e.g.
+  * parliamentarians with ID, party, commission, ...
+  * parliamentary affairs with ID, title, description, ...
+  * voting behavior
+  * vested interests: confederation and cantons (if available)
+* not provide any calculated values and derivatives.
+* not create additional interlinking.
+* provide data as a bulk download.
+* provide data as an open API
+* not be a gatekeeper.
+* be financially and organizationally sustainable.
+* be lean (not too much overhead)
+* work with and not against the parliament and the government.
+* be handed over to an official body in the future.
+
+## Issues to address
+* What's the right level of abstraction/detail for the data standard?
+* How do we harmonize existing data models?
+* How do we build on existing international standards like [OParl](https://github.com/OParl) and [Popolo](https://github.com/popolo-project/popolo-spec)?
+* Data quality
+* Reliability
+* Trustworthiness
+* Who will fund the work? Intercantonal Legislative Conference, Digital Administration Switzerland, SRGSSR, foundations?
+* What’s a fair price for the work already done and maintenance provided in the future?
+* How and when do we include the parliamentary services?
+* How do we incentivize parliamentary services and their suppliers to adapt the data standard
+* Who provides what data?
+* Who provides support? Questions, anomalies, bugs,...
+
+## The Team [(Onion)](https://teamonion.works/)
+* The core team builds the open API
+* Collaborators create the open standard
+* Supporters...
+  
+Send us a message if you want to join our mission!
