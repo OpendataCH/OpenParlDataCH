@@ -1,11 +1,11 @@
 # OpenParlDataCH
 Among municipalities, cantons and the national level there’s a variety of different structures and quality for parliamentary data. [Some data is not machine-readable, some are not fully accurate, some lack documentation and data is hardly comparable](https://docs.google.com/spreadsheets/d/1cHF9qOHYoOcumw03d29mb90T_Elc8aHQrMCEsML88lk/edit?usp=sharing). Political monitoring and analysis tools need to update their crawlers for the same parliamentary websites and clean the same data, rather than focusing on their core competencies. Interoperability across the three levels of government is not guaranteed, with negative consequences for the legislative and executive branches themselves. A data standard to which smaller cantons and municipalities in particular could orient themselves is not in sight.
 
-As a citizen, I would like to be able to follow a specific topic or parliamentary affair from A to Z. For our democracy to work, we need an overview of the political agenda and how parliamentarians have voted. To achieve this, we bring together people from different backgrounds (business, civil society, governments, parliaments, academia), use synergies and collaboratively work towards an open standard and an open API for parliamentary data across all federal levels. In short: **We make harmonized Swiss parliamentary data accessible as an open web service.**
+As a citizen, I would like to be able to follow a specific topic or parliamentary affair from A to Z. For our democracy to work, we need an overview of the political agenda and how parliamentarians have voted. To build this infrastructure, we bring together people from different backgrounds (business, civil society, governments, parliaments, academia), use synergies and collaboratively work towards an open standard and an open API for parliamentary data across all federal levels. In short: **We make harmonized Swiss parliamentary data accessible as an open web service.**
 
 ## Our service should…
 * obtain already machine-readable and up-to-date information from the source (e.g. parliamentary service API) and harmonize it.
-* make non machine readable information published by the parliamentary services machine readable and harmonize it.
+* make non machine-readable information published by the parliamentary services machine-readable and harmonize it.
 * follow an Open, collaboratively defined standard taking into account international good practices like [OParl](https://github.com/OParl) and (if possible) involve [eCH](https://www.ech.ch/)
 * be federated.
 * provide Open Data.
@@ -31,12 +31,15 @@ As a citizen, I would like to be able to follow a specific topic or parliamentar
 * How do we build on existing international standards like [OParl](https://github.com/OParl) and [Popolo](https://github.com/popolo-project/popolo-spec)?
 * How can we make efficient decisions as an interdisciplinary, heterogenic group?
 * Data quality
+* Data and API management 
 * Reliability
 * Trustworthiness
-* Who will fund the work? Intercantonal Legislative Conference, Digital Administration Switzerland, SRGSSR, foundations?
+* Multilingualism
+* How do we fund this infrastructure that [many will benefit from but no single public body is currently willing or able to sustain on its own](https://binary-butterfly.de/artikel/opendata-bisschen-prototyp-und-das-wars-dann/)? Intercantonal Legislative Conference, Digital Administration Switzerland, SRGSSR, foundations?
 * What’s a fair price for the work already done and maintenance provided in the future?
 * How and when do we include the parliamentary services?
 * How do we incentivize parliamentary services and their suppliers to adapt the data standard
+* How do we foster a culture of openness?
 * Who provides what data?
 * Who provides support? Questions, anomalies, bugs,...
 
