@@ -29,6 +29,7 @@ As a citizen, I would like to be able to follow a specific topic or parliamentar
 * What's the right level of abstraction/detail for the data standard?
 * How do we harmonize existing data models?
 * How do we build on existing international standards like [OParl](https://github.com/OParl) and [Popolo](https://github.com/popolo-project/popolo-spec)?
+* How can we make efficient decisions as an interdisciplinary, heterogenic group?
 * Data quality
 * Reliability
 * Trustworthiness
