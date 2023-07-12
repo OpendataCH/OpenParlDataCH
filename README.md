@@ -18,10 +18,10 @@ As a citizen, I would like to be able to follow a specific topic or parliamentar
 * not provide any calculated values and derivatives.
 * not create additional interlinking.
 * provide data as a bulk download.
-* provide data as an open API
+* provide data as an open API.
 * not be a gatekeeper.
 * be financially and organizationally sustainable.
-* be lean (not too much overhead)
+* be lean (not too much overhead).
 * work with and not against the parliament and the government.
 * be handed over to an official body in the future.
 
@@ -44,4 +44,4 @@ As a citizen, I would like to be able to follow a specific topic or parliamentar
 * Collaborators create the open standard
 * Supporters...
   
-Send us a message if you want to join our mission!
+Send us a message if you want to join our mission! Contribute to this document by creating a pull request.
