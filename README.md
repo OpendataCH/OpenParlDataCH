@@ -39,7 +39,11 @@ As a citizen, I would like to be able to follow a specific topic or parliamentar
 * Reliability
 * Trustworthiness
 * Multilingualism
-* How do we fund this infrastructure that [many will benefit from but no single public body is currently willing or able to sustain on its own](https://binary-butterfly.de/artikel/opendata-bisschen-prototyp-und-das-wars-dann/)? Intercantonal Legislative Conference, Digital Administration Switzerland, SRGSSR, foundations?
+* How do we fund this infrastructure that [many will benefit from but no single public body is currently willing or able to sustain on its own](https://binary-butterfly.de/artikel/opendata-bisschen-prototyp-und-das-wars-dann/)?
+  * Intercantonal Legislative Conference?
+  * Digital Public Services Switzerland? They annually fund ["e-participation projects and innovations"](https://www.digital-public-services-switzerland.ch/en/implementation/egovernment-implementation-plan/promoting-e-participation-projects-and-innovations)
+  * SRG SSR?
+  * foundations?
 * What’s a fair price for the work already done and maintenance provided in the future?
 * How and when do we include the parliamentary services?
 * How do we incentivize parliamentary services and their suppliers to adapt the data standard
