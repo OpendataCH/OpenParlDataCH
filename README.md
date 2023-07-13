@@ -52,8 +52,9 @@ As a citizen, I would like to be able to follow a specific topic or parliamentar
 * Who provides support? Questions, anomalies, bugs,...
 
 ## The Team [(Onion)](https://teamonion.works/)
-* The core team builds the open API
-* Collaborators create the open standard
+* The core team builds the open API:
+  * (insert name here)
+* Collaborators define the open standard
 * Supporters...
   
 Send us a message if you want to join our mission! Contribute to this document by creating a pull request.
