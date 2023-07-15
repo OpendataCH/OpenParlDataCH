@@ -53,7 +53,8 @@ As a citizen, I would like to be able to follow a specific topic or parliamentar
 
 ## The Team [(Onion)](https://teamonion.works/)
 * The core team builds the open API:
-  * (insert name here)
+  * [Christian](https://github.com/gutknecht)
+  * ...(insert name here)
 * Collaborators define the open standard
 * Supporters...
   
