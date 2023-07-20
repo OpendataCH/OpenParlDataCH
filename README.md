@@ -40,7 +40,7 @@ As a citizen, I would like to be able to follow a specific topic or parliamentar
 * Trustworthiness
 * Multilingualism
 * How do we fund this infrastructure that [many will benefit from but no single public body is currently willing or able to sustain on its own](https://binary-butterfly.de/artikel/opendata-bisschen-prototyp-und-das-wars-dann/)?
-  * Intercantonal Legislative Conference?
+  * Intercantonal Legislative Conference? State Writers Conference?
   * Digital Public Services Switzerland? They annually fund ["e-participation projects and innovations"](https://www.digital-public-services-switzerland.ch/en/implementation/egovernment-implementation-plan/promoting-e-participation-projects-and-innovations)
   * SRG SSR?
   * [Interreg](https://www.interreg.org/): would need DACHLI context
