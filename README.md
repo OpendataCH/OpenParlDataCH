@@ -51,6 +51,13 @@ As a citizen, I would like to be able to follow a specific topic or parliamentar
 * How do we foster a culture of openness?
 * Who provides what data?
 * Who provides support? Questions, anomalies, bugs,...
+* Meiner Meinung nach braucht es eine gesunde Governance nach ethisch/moralischen Grundsätzen die viele euer genannten Punkte abdecken und dies durch ein Gremium (Verein oder ähnliches) getragen und auch „überwacht“ wird. Diese Governance sollte dann in eine Art Thesenanschlag/Manifest öffentlich zugänglich sein.
+* Auf lange Sicht scheint mir doch auch ein Business case relevant. Mehr aber aus einer kostendeckenden und innovierenden Perspektive. Sprich das Geld das reinkommt ist da um den Service zu halten/betreiben und je nach Bedürfnisse der Kundschaft auch neue Features/Daten/etc. umzusetzen
+* Mir fehlt noch grundsätzlich der Umgang mit Veränderung. Was passiert wenn Daten und -strukturen sich ändern, was wenn ein Service obsolet wird oder nicht mehr verfügbar ist? Wie gehen wir damit um? Wird gecached oder sind wir einfach Abbild der „Realität“?
+* Gibt es einen Prozess oder ein Backlog/Board/Roadmap des Services? Wenn ja können potentielle User hier auch Features wünschen oder Bugs rapportieren?
+* Noch ein Fragezeichen habe ich beim Punkt „ not be a gatekeeper“: Wenn wir einen zentralen Hub bauen, welcher alles zusammenzieht und je nach dem auch Modifikationen an den Daten vornimmt um OParl konform zu sein, sind wir ja zwangsläufig ein gatekeeper, nicht? Solange das aber öffentlich zugänglich bleibt (Da stellt sich dann auch wieder die Business case Frage), sehe ich kein Problem dabei.
+* Weiter würde ich allenfalls noch ergänzen dass diese Daten nicht zwingend für den kommerziellen Gebrauch gedacht sind. Und wenn schon, dann soll in Form einer Spende (oder je nach dem dann Businessmodell) an den Verein/Service zurückfliessen
+
 
 ## The Team [(Onion)](https://teamonion.works/)
 * The core team builds the open API:
@@ -58,5 +65,6 @@ As a citizen, I would like to be able to follow a specific topic or parliamentar
   * ...(insert name here)
 * Collaborators define the open standard
 * Supporters...
+  * [Liip](https://www.liip.ch), Opendata-Circle, [Flavio](https://flaviomuff.ch/)  
   
 Send us a message if you want to join our mission! Contribute to this document by creating a pull request.
