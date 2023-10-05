@@ -187,7 +187,7 @@ Possible Group Types:
 
 - Simplification?: A person has one address, one email, one phone number only
 
-## MEMBERHSHIP
+## MEMBERSHIP
 
 Difficulty: Often the start and end of a membership is not available
 
