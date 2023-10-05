@@ -228,6 +228,10 @@ Possible Group Types:
 
 ## MEMBERSHIP
 
+The relation from a person to a group.
+
+In many parliamentary information systems (in particular those from https://cmiag.ch/) the memberships are explicitly displayed and can be extracted easily.
+
 Difficulty: Often the start and end of a membership is not available
 
 
@@ -247,21 +251,19 @@ Most parliaments use systems that make use of at least 2 identifiers per affair.
 | JU | [Initiatives parlementaires No 41](Initiatives parlementaires No 41) |  |
 | LU | [A 610](https://www.lu.ch/kr/parlamentsgeschaefte/detail?ges=9607d8e286904c1c8df0aec1016ba62c) | 9607d8e286904c1c8df0aec1016ba62c |
 
-Experience shows that the affair_key is in some cases is not unique. The same key can be given for different affair types or affairs of different legislation periods. To make it unique on the parliament level one has to add a prefix for the type or the legislation.
-
-Examples:
+Experience shows that the affair_key is in some cases is not unique. The same key can be given for different affair types or affairs of different legislation periods. To make it unique on the parliament level one has to add a prefix for the type or the legislation. Examples:
 
 | body | affair_key (original) | affair_key (adjusted for uniqueness) | external_id |
-|---|---|---|
+|---|---|---|---|
 | LU | [A 506](https://www.lu.ch/kr/parlamentsgeschaefte/detail?ges=adcfaec76b5c4dc6a84d533ee01f3264) | 2021A 506 | adcfaec76b5c4dc6a84d533ee01f3264 |
 | LU | [A 506](https://www.lu.ch/kr/parlamentsgeschaefte/detail?ges=13c4abb64cd647ad96a9f83dfb21aeaa) | 2018A 506 | 13c4abb64cd647ad96a9f83dfb21aeaa |
 | TI | [1643](https://www4.ti.ch/poteri/gc/ricerca-messaggi-e-atti/ricerca/risultati/dettaglio?user_gcparlamento_pi8%5Battid%5D=108698&cHash=764bc770811676fa1972f45c8e17a4b1&user_gcparlamento_pi8[ricerca]=1643) | MO 1643| 764bc770811676fa1972f45c8e17a4b1 |
 | TI | [1643](https://www4.ti.ch/poteri/gc/ricerca-messaggi-e-atti/ricerca/risultati/dettaglio?user_gcparlamento_pi8%5Battid%5D=89056&cHash=630bf929124689d9b6ca36ff955cd794&user_gcparlamento_pi8[ricerca]=1643) | INT 1643 | 630bf929124689d9b6ca36ff955cd794 |
 
 
-### title vs title_long
+### title vs composite title
 
-Some parliaments expose the title of an affair as composite of several attributes, Example:
+Some parliaments expose the title of an affair as composite of several attributes. Examples:
 
 | Affair_Number | Exposed Title | Actual Title Only (needs to be extracted) |
 |---|---|---|
