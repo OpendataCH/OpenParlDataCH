@@ -220,25 +220,29 @@ Possible Group Types:
 * **committee** (Finanzkommission, Interessengruppe, Delegation etc.)
 * **committee ad hoc** (Spezialkommissionen, oder in manchen Kantonen wird pro Geschäft eine Kommission gebildet: z.B [VD](https://www.vd.ch/toutes-les-autorites/grand-conseil/depute-e-s/membre-du-grand-conseil/membre/280370#groups), [Vorberatende Kommissionen SG](https://www.ratsinfo.sg.ch/gremien?itemsPerPage=50&type=10&state=active&ordering=type.title&page=1)
 
- ## PERSON
 
-- Simplification?: A person has one address, one email, one phone number only - Just store the latest, or do we want mutliple including historical data?
-- 
-- 
+## PERSON
+### Simplification
+A person has one address, one email, one phone number only - Just store the latest, or do we want mutliple including historical data?
+
+### Disambiguation
+It's one thing to gather all persons from one parliament, another to disambigute them:
+* Example Erich Hess:
+    * Nationalrat: https://www.parlament.ch/de/Seiten/ViewCouncillor.aspx?CouncillorId=4163
+    * Grosser Rat Bern: https://www.gr.be.ch//de/start/grosser-rat/mitglieder/mitgliedersuche/mitgliederdetail.html?guid=0a4555c040a3402990d64502ea529969
+    * Stadtrat Bern: https://ris.bern.ch/Mitglied.aspx?obj_guid=62e838cc5d38430ea363dde4c8103694
+
 
 ## MEMBERSHIP
 
-The relation from a person to a group.
+In many parliamentary information systems (especially those of https://cmiag.ch/), memberships are explicitly displayed and can be easily extracted. The membership of the of the council can be reasoned. In some cases the memberships of committees are only available in PDFs, e.g. [TG](https://parlament.tg.ch/organe/kommissionen/staendige-kommissionen/jk.html/12224)
 
-In many parliamentary information systems (in particular those from https://cmiag.ch/) the memberships are explicitly displayed and can be extracted easily.
-
-Difficulty: Often the start and end of a membership is not available
+### Start and End - Unclear
+Often the start and end of a membership is not available in a structured form.
 
 
 ## AFFAIR
-
-### Affair_Key
-
+### affair_key
 Most parliaments use systems that make use of at least 2 identifiers per affair.
 
 * A technical id (affair_external_id) that might be an integer or a guid created and made for systems - usuall unique
@@ -248,7 +252,7 @@ Most parliaments use systems that make use of at least 2 identifiers per affair.
 |---|---|---|
 | OW | [32.23.12/33.23.06](https://www.ow.ch/politbusiness/106300) | 106300 |
 | BE | [2023.RRGR.288](https://www.gr.be.ch/de/start/geschaefte/geschaeftssuche/geschaeftsdetail.html?guid=ff72ae475a3c45d8bc2ac07c98eea397) | ff72ae475a3c45d8bc2ac07c98eea397 |
-| JU | [Initiatives parlementaires No 41](Initiatives parlementaires No 41) |  |
+| JU | [Initiatives parlementaires No 41](https://www.jura.ch/PLT/Interventions-parlementaires-deposees/Initiatives-parlementaires/Initiatives-parlementaires.html) |  |
 | LU | [A 610](https://www.lu.ch/kr/parlamentsgeschaefte/detail?ges=9607d8e286904c1c8df0aec1016ba62c) | 9607d8e286904c1c8df0aec1016ba62c |
 
 Experience shows that the affair_key is in some cases is not unique. The same key can be given for different affair types or affairs of different legislation periods. To make it unique on the parliament level one has to add a prefix for the type or the legislation. Examples:
@@ -260,9 +264,23 @@ Experience shows that the affair_key is in some cases is not unique. The same ke
 | TI | [1643](https://www4.ti.ch/poteri/gc/ricerca-messaggi-e-atti/ricerca/risultati/dettaglio?user_gcparlamento_pi8%5Battid%5D=108698&cHash=764bc770811676fa1972f45c8e17a4b1&user_gcparlamento_pi8[ricerca]=1643) | MO 1643| 764bc770811676fa1972f45c8e17a4b1 |
 | TI | [1643](https://www4.ti.ch/poteri/gc/ricerca-messaggi-e-atti/ricerca/risultati/dettaglio?user_gcparlamento_pi8%5Battid%5D=89056&cHash=630bf929124689d9b6ca36ff955cd794&user_gcparlamento_pi8[ricerca]=1643) | INT 1643 | 630bf929124689d9b6ca36ff955cd794 |
 
+In rare cases, but just frequently in cantonal **consultations**, there is neither a clear technical nor business identifier. The closest to something like an identifier is then the date, which is also not necessary unique. Examples:
 
-### title vs composite title
+* BS [Vernehmlassungen](https://www.regierungsrat.bs.ch/geschaefte/vernehmlassungen.html)
+* SO [Vernehmlassungen](https://so.ch/regierung/vernehmlassungen/)
+* JU [Projet de Lois](https://www.jura.ch/Projets-de-lois/Textes-adoptes.html)
 
+### affair_url
+The majority of all parliamentary systems provide a URL for an affair to link to. But there are also cases where this is not so easy. Examples:
+
+* GE: Information about an affair is spread over several documents and protocols. The best URL to an affairis a search: M 2384 -> https://ge.ch/grandconseil/search?search=M+2384
+* VD: Information to an affair is mainly provided via short snippets and links in meeting agendas (Ordre du jour):
+    * https://www.vd.ch/toutes-les-autorites/grand-conseil/seances-du-grand-conseil/point-seance/id/3019c8b6-e41c-46ab-a6f3-14e4865fbf4c/meeting/1000535
+    * Actually there is something like a affair page, but it's only available as a subsite of the author: https://www.vd.ch/toutes-les-autorites/grand-conseil/depute-e-s/detail-objet/objet/20_HQU_29/membre/308334
+* Bellinzona: Affairs have no individual link, but are part of one site: https://www.bellinzona.ch/index.php?node=876&lng=1&rif=76f856dddb
+* JU: Affairs are listet with the initial text only: https://www.jura.ch/PLT/Interventions-parlementaires-deposees/Interventions-parlementaires-deposees.html
+
+### title vs. composite title
 Some parliaments expose the title of an affair as composite of several attributes. Examples:
 
 | Affair_Number | Exposed Title | Actual Title Only (needs to be extracted) |
@@ -274,3 +292,9 @@ Some parliaments expose the title of an affair as composite of several attribute
 
 To create a unity here, it seems to make sense to extract the actual title (affair_title) and put the original title in an additional field (affair_title_long). With certain titles, you can't avoid extracting important information from the title anyway. In the mentioned example [AG 23.77](https://www.ag.ch/grossrat/grweb/de/195/Detail%20Gesch%C3%A4ft?ProzId=5892745) the author is only mentioned in the title (and not separately on the detail page).
 
+### affair_status
+For many parliaments, the status of an affair is explicitly stated ([AG](https://www.ag.ch/grossrat/grweb/de/195/Detail%20Gesch%C3%A4ft?ProzId=5981910)) or can at least be identified as ongoing or completed based on a search or the location of the top page in CMS (eg. [GL Aktuelle Geschäfte / Archiv](https://www.gl.ch/parlament/landrat/geschaefte/aktuelle-geschaefte.html/241)).
+
+In some parliaments, however, sometimes only the initial text is published without the result ever being displayed on the same page. This is because the course of the process can ultimately only be seen in the minutes or other documents. Examples:
+
+JU: https://www.jura.ch/PLT/Interventions-parlementaires-deposees/Interventions-parlementaires-deposees.html
