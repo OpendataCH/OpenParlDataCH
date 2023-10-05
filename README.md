@@ -31,12 +31,15 @@ As a citizen, I would like to be able to follow a specific topic or parliamentar
 * How do we harmonize existing data models?
 * How do we build on existing international standards like...
   * [OParl](https://github.com/OParl)
+  * [European Legislation Identifier (ELI)](https://eur-lex.europa.eu/eli-register/about.html)
   * [Popolo](https://github.com/popolo-project/popolo-spec)
   * (to be extended)
 * How can we make efficient decisions as an interdisciplinary, heterogenic group?
+* How do we establish and monitor governance according to ethical principles?
 * Data quality
 * Data and API management 
 * Reliability
+* How do we react to changing data and data structures or if a service becomes obsolete or no longer available? caching vs. simply reflecting the "reality"?
 * Trustworthiness
 * Multilingualism
 * How do we fund this infrastructure that [many will benefit from but no single public body is currently willing or able to sustain on its own](https://binary-butterfly.de/artikel/opendata-bisschen-prototyp-und-das-wars-dann/)?
@@ -45,16 +48,22 @@ As a citizen, I would like to be able to follow a specific topic or parliamentar
   * SRG SSR?
   * [Interreg](https://www.interreg.org/): would need DACHLI context
   * foundations?
+* Is there be a business case in the long term to cover the maintenance and operational costs and updates? 
 * What’s a fair price for the work already done and maintenance provided in the future?
 * How and when do we include the parliamentary services?
-* How do we incentivize parliamentary services and their suppliers to adapt the data standard
+* How do we incentivize parliamentary services and their suppliers to adapt the data standard?
 * How do we foster a culture of openness?
 * Who provides what data?
 * Who provides support? Questions, anomalies, bugs,...
+* Is there a process or a backlog/board/roadmap of the service? If so, can potential users also request features or report bugs here?
 
 ## The Team [(Onion)](https://teamonion.works/)
 * The core team builds the open API:
   * [Christian](https://github.com/gutknecht)
+  * [Reto](https://github.com/rettichschnidi)
+  * [Flavio](https://github.com/flaviomuff)
+  * [Andreas](https://github.com/andreasamsler)
+  * [Florin](https://github.com/florihas)
   * ...(insert name here)
 * Collaborators define the open standard
 * Supporters...
