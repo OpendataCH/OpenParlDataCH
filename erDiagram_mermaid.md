@@ -2,7 +2,7 @@
 
 ```mermaid
 erDiagram
-    AFFAIR }|..|{DOCUMENT : has
+    AFFAIR ||--o{ DOCUMENT : has
     AFFAIR ||--o{ EVENT : has
     AFFAIR ||--o{ CONTRIBUTOR : has
     AFFAIR ||--o{ VOTING : has
@@ -14,19 +14,30 @@ erDiagram
     PERSON ||--o{ INTEREST : has
     BODY ||--o{ AFFAIR : has
     BODY ||--o{ BODY : "has children"
-    BODY ||--o{ GROUP : "has groups"
+    BODY ||--o{ GROUP : "has"
+    VOTING ||--o{ EVENT : creates
+    GROUP ||--o{ MEETING : "has"
+    MEETING ||--o{AGENDAITEM: "has"
+    MEETING ||--o{NOTES: "has"
+    MEETING ||--o{DOCUMENT: "has"
 
-
-
+        BODY {
+            guid body_id PK
+            guid body_wikidata_id
+            guid body_bfs_id
+            string body_name
+            string body_type
+            string body_parent_body_id FK
+            }
        
         AFFAIR {
             guid affair_id PK
-            string affair_body_name
-            string affair_body_id
+            string affair_body_id FK
             string affair_key
             string affair_external_id
             string affair_url
             string affair_title
+            string affair_title_long
             string affair_type
             string affair_status
             date affair_date_start
@@ -79,6 +90,8 @@ erDiagram
             int person_address_postal_code
             int person_address_city
             string person_phone
+            date person_date_of_birth
+            date person_date_of_death
             string person_language
             string person_occupation
             string person_birthdate
@@ -98,6 +111,7 @@ erDiagram
 
         GROUP {
             guid group_id PK
+            guid body_id FK
             string group_name
             string group_name_abbreviation
             string group_type_external
@@ -106,7 +120,7 @@ erDiagram
             string group_description
             date group_start
             date group_end
-            boolen group_active
+            boolean group_active
             }
 
          INTEREST {
@@ -119,7 +133,7 @@ erDiagram
             string interest_location
             date interest_start
             date interest_end
-            boolen interest_active
+            boolean interest_active
             }
 
         VOTING {
@@ -127,7 +141,7 @@ erDiagram
             string voting_title
             string voting_external_id
             string voting_affair_id FK
-            date voting_date
+            datetime voting_date
             string voting_type
             string voting_url
             string voting_meaning_of_yes
@@ -146,20 +160,43 @@ erDiagram
             string vote_vote_display
             }
 
-        BODY {
-            guid body_id PK
-            guid body_wikidata_id
-            guid body_bfs_id
-            string body_name
+
+        MEETING {
+            guid meeting_id PK
+            guid meeting_group_id FK
+            string meeting_external_id
+            string meeting_url
+            string meeting_series_name
+            string meeting_series_number
+            string meeting_type
+            datetime meeting_start
+            datetime meeting_end
+            string meeting_location
+            string meeting_state
+            boolean meeting_cancelled
+            array meeting_participant
             string body_type
             string body_parent_body_id FK
-            string body_council_legislative
-            string body_council_executive
+            string body_type
+
             }
+
+        AGENDAITEM {
+            guid agendaitem_id PK
+            guid agendaitem_meeting_id FK
+            string agendaitem_external_id
+            string agendaitem_url
+            string agendaitem_number
+            int agendaitem_order
+            string agendaitem_name
+            string agendaitem_result
+            guid agendaitem_affair_id FK
+            }
+
 
 ```
 
-# Entities
+# Entities - Remarks / Discussion
 
 ## BODY
 
@@ -178,16 +215,60 @@ Unlike for canton Zurich, this boundary is often not that clear and given as aff
 Possible Group Types:
 * **party** (Partei)
 * **Parliamentary group** (Fraktion)
-* **council legislative** (Ständerat, Nationalrat, Kantonsrat, Landrat, Einwohnerrat, Gemeinrat, Stadtrat etc.)
+* **council legislative** (Ständerat, Nationalrat, Kantonsrat, Landrat, Einwohnerrat, Gemeinderat, Stadtrat etc.)
 * **council executive** (Bundesrat, Regierungsrat, Gemeinderat, Stadtrat etc)
 * **committee** (Finanzkommission, Interessengruppe, Delegation etc.)
 * **committee ad hoc** (Spezialkommissionen, oder in manchen Kantonen wird pro Geschäft eine Kommission gebildet: z.B [VD](https://www.vd.ch/toutes-les-autorites/grand-conseil/depute-e-s/membre-du-grand-conseil/membre/280370#groups), [Vorberatende Kommissionen SG](https://www.ratsinfo.sg.ch/gremien?itemsPerPage=50&type=10&state=active&ordering=type.title&page=1)
 
  ## PERSON
 
-- Simplification?: A person has one address, one email, one phone number only
+- Simplification?: A person has one address, one email, one phone number only - Just store the latest, or do we want mutliple including historical data?
+- 
+- 
 
 ## MEMBERSHIP
 
 Difficulty: Often the start and end of a membership is not available
+
+
+## AFFAIR
+
+### Affair_Key
+
+Most parliaments use systems that make use of at least 2 identifiers per affair.
+
+* A technical id (affair_external_id) that might be an integer or a guid created and made for systems - usuall unique
+* A short key (affair_key) made for humans to reference - sometimes not unique
+
+| body | affair_key | affair_extern_id |
+|---|---|---|
+| OW | [32.23.12/33.23.06](https://www.ow.ch/politbusiness/106300) | 106300 |
+| BE | [2023.RRGR.288](https://www.gr.be.ch/de/start/geschaefte/geschaeftssuche/geschaeftsdetail.html?guid=ff72ae475a3c45d8bc2ac07c98eea397) | ff72ae475a3c45d8bc2ac07c98eea397 |
+| JU | [Initiatives parlementaires No 41](Initiatives parlementaires No 41) |  |
+| LU | [A 610](https://www.lu.ch/kr/parlamentsgeschaefte/detail?ges=9607d8e286904c1c8df0aec1016ba62c) | 9607d8e286904c1c8df0aec1016ba62c |
+
+Experience shows that the affair_key is in some cases is not unique. The same key can be given for different affair types or affairs of different legislation periods. To make it unique on the parliament level one has to add a prefix for the type or the legislation.
+
+Examples:
+
+| body | affair_key (original) | affair_key (adjusted for uniqueness) | external_id |
+|---|---|---|
+| LU | [A 506](https://www.lu.ch/kr/parlamentsgeschaefte/detail?ges=adcfaec76b5c4dc6a84d533ee01f3264) | 2021A 506 | adcfaec76b5c4dc6a84d533ee01f3264 |
+| LU | [A 506](https://www.lu.ch/kr/parlamentsgeschaefte/detail?ges=13c4abb64cd647ad96a9f83dfb21aeaa) | 2018A 506 | 13c4abb64cd647ad96a9f83dfb21aeaa |
+| TI | [1643](https://www4.ti.ch/poteri/gc/ricerca-messaggi-e-atti/ricerca/risultati/dettaglio?user_gcparlamento_pi8%5Battid%5D=108698&cHash=764bc770811676fa1972f45c8e17a4b1&user_gcparlamento_pi8[ricerca]=1643) | MO 1643| 764bc770811676fa1972f45c8e17a4b1 |
+| TI | [1643](https://www4.ti.ch/poteri/gc/ricerca-messaggi-e-atti/ricerca/risultati/dettaglio?user_gcparlamento_pi8%5Battid%5D=89056&cHash=630bf929124689d9b6ca36ff955cd794&user_gcparlamento_pi8[ricerca]=1643) | INT 1643 | 630bf929124689d9b6ca36ff955cd794 |
+
+
+### title vs title_long
+
+Some parliaments expose the title of an affair as composite of several attributes, Example:
+
+| Affair_Number | Exposed Title | Actual Title Only (needs to be extracted) |
+|---|---|---|
+| [UR LA.2023-0685](https://www.ur.ch/politbusiness/106831) | Motion Flavio Gisler, Schattdorf, für eine Standesinitiative für mehr Sicherheit am Axen | Für eine Standesinitiative für mehr Sicherheit am Axen |
+| [SZ 2023.0376](https://www.sz.ch/behoerden/kantonsrat/geschaefte/geschaeft-detailseite.html/8756-8758-8799-9210-9211/geschaeft_guid/8a273a58f1804564ad5a02db00a5496f) | Kleine Anfrage KA 27/23: SOB-Bahnübergang in Wollerau – Sofortmassnahmen! | SOB-Bahnübergang in Wollerau – Sofortmassnahmen! |
+| [AG 23.77](https://www.ag.ch/grossrat/grweb/de/195/Detail%20Gesch%C3%A4ft?ProzId=5892745) | Postulat Lelia Hunziker, SP, Aarau (Sprecherin), Alain Burger, SP, Wettingen, vom 14. März 2023 betreffend Umsetzung von Gleichstellung in der Steuererklärung von verheirateten Paaren | Umsetzung von Gleichstellung in der Steuererklärung von verheirateten Paaren |
+| [GL 2023-42](https://www.gl.ch/parlament/landrat/geschaeftsdetails.html/240/geschaeft_guid/1d39eec1a53947039d10ac028b635298) | Memorialsantrag Bauerngruppe Glarus Süd «Für eine faire Abgeltung der Tierhalter» | Für eine faire Abgeltung der Tierhalter |
+
+To create a unity here, it seems to make sense to extract the actual title (affair_title) and put the original title in an additional field (affair_title_long). With certain titles, you can't avoid extracting important information from the title anyway. In the mentioned example [AG 23.77](https://www.ag.ch/grossrat/grweb/de/195/Detail%20Gesch%C3%A4ft?ProzId=5892745) the author is only mentioned in the title (and not separately on the detail page).
 
