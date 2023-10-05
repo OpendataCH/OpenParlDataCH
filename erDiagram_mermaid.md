@@ -1,4 +1,27 @@
-# Overview
+# Overview Entities
+
+```mermaid
+erDiagram
+    AFFAIR ||--o{ DOCUMENT : has
+    AFFAIR ||--o{ EVENT : has
+    AFFAIR ||--o{ CONTRIBUTOR : has
+    AFFAIR ||--o{ VOTING : has
+    VOTING ||--o{ VOTE : has
+    CONTRIBUTOR ||--o{ PERSON : is
+    CONTRIBUTOR ||--o{ GROUP : is
+    PERSON ||--o{ MEMBERSHIP : "has"
+    MEMBERSHIP ||--o{ GROUP : "of"
+    PERSON ||--o{ INTEREST : has
+    BODY ||--o{ AFFAIR : has
+    BODY ||--o{ BODY : "has children"
+    BODY ||--o{ GROUP : "has"
+    VOTING ||--o{ EVENT : creates
+    GROUP ||--o{ MEETING : "has"
+    MEETING ||--o{AGENDAITEM: "has"
+    MEETING ||--o{NOTES: "has"
+    MEETING ||--o{DOCUMENT: "has"
+```
+# Entities with fields
 
 ```mermaid
 erDiagram
