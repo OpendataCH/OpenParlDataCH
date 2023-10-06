@@ -219,22 +219,20 @@ erDiagram
 
 ```
 
-# Entities - Remarks / Discussion
+#  Remarks / Discussion
+
 
 ## BODY
-
 Hierarchy of country, cantons, muncipalities. For muncipalities the official directory can be used: https://www.bfs.admin.ch/bfs/de/home/dienstleistungen/forschung/api/api-gemeinde.html
-
 ### Relation: BODY - AFFAIR
-
 * In a simple approach all affairs are attached to one body (all affairs of canton ZH, all of CH)
 * One could also sympathize with a slightly more complex model and put a group between body and affair
   * All affairs of Kantonrat Zürich: https://www.kantonsrat.zh.ch/geschaefte?p=1
   * All affairs of Kantonsregierung Zürich: https://www.zh.ch/de/politik-staat/gesetze-beschluesse/beschluesse-des-regierungsrates.html
 Unlike for canton Zurich, this boundary is often not that clear and given as affairs from the executive become input for the legislative and vice versa.
 
-## GROUP
 
+## GROUP
 Possible Group Types:
 * **party** (Partei)
 * **Parliamentary group** (Fraktion)
@@ -247,7 +245,6 @@ Possible Group Types:
 ## PERSON
 ### Simplification
 A person has one address, one email, one phone number only - Just store the latest, or do we want mutliple including historical data?
-
 ### Disambiguation
 It's one thing to gather all persons from one parliament, another to disambigute them:
 * Example Erich Hess:
@@ -257,20 +254,23 @@ It's one thing to gather all persons from one parliament, another to disambigute
 
 
 ## MEMBERSHIP
-
 In many parliamentary information systems (especially those of https://cmiag.ch/), memberships are explicitly displayed and can be easily extracted. The membership of the of the council can be reasoned. In some cases the memberships of committees are only available in PDFs, e.g. [TG](https://parlament.tg.ch/organe/kommissionen/staendige-kommissionen/jk.html/12224)
-
 ### Start and End - Unclear
 Often the start and end of a membership is not available in a structured form.
+
+
+## INTEREST
+Parliaments that require their members to declare their interests sometimes provide more or less structure as to how this is to be done.
+* Minimal: Simple list (one line per interest). Example: [AI](https://www.ai.ch/behoerdenmitglieder/fritsche-manser-patricia)
+* Ususal: One line for multiple types like civil_activity, directorial activity, professional activity. Example: [BS](https://grosserrat.bs.ch/mitglieder/15004029-lukas-faesch)
+* Maximal: Extra fields for role, location, type of organisation, start, end. Example: [CH](https://www.parlament.ch/de/%C3%BCber-das-parlament/parlamentsw%C3%B6rterbuch/parlamentsw%C3%B6rterbuch-detail?WordId=487)
 
 
 ## AFFAIR
 ### affair_key
 Most parliaments use systems that make use of at least 2 identifiers per affair.
-
 * A technical id (affair_external_id) that might be an integer or a guid created and made for systems - usuall unique
 * A short key (affair_key) made for humans to reference - sometimes not unique
-
 | body | affair_key | affair_extern_id |
 |---|---|---|
 | OW | [32.23.12/33.23.06](https://www.ow.ch/politbusiness/106300) | 106300 |
@@ -279,7 +279,6 @@ Most parliaments use systems that make use of at least 2 identifiers per affair.
 | LU | [A 610](https://www.lu.ch/kr/parlamentsgeschaefte/detail?ges=9607d8e286904c1c8df0aec1016ba62c) | 9607d8e286904c1c8df0aec1016ba62c |
 
 Experience shows that the affair_key is in some cases is not unique. The same key can be given for different affair types or affairs of different legislation periods. To make it unique on the parliament level one has to add a prefix for the type or the legislation. Examples:
-
 | body | affair_key (original) | affair_key (adjusted for uniqueness) | external_id |
 |---|---|---|---|
 | LU | [A 506](https://www.lu.ch/kr/parlamentsgeschaefte/detail?ges=adcfaec76b5c4dc6a84d533ee01f3264) | 2021A 506 | adcfaec76b5c4dc6a84d533ee01f3264 |
@@ -287,21 +286,19 @@ Experience shows that the affair_key is in some cases is not unique. The same ke
 | TI | [1643](https://www4.ti.ch/poteri/gc/ricerca-messaggi-e-atti/ricerca/risultati/dettaglio?user_gcparlamento_pi8%5Battid%5D=108698&cHash=764bc770811676fa1972f45c8e17a4b1&user_gcparlamento_pi8[ricerca]=1643) | MO 1643| 764bc770811676fa1972f45c8e17a4b1 |
 | TI | [1643](https://www4.ti.ch/poteri/gc/ricerca-messaggi-e-atti/ricerca/risultati/dettaglio?user_gcparlamento_pi8%5Battid%5D=89056&cHash=630bf929124689d9b6ca36ff955cd794&user_gcparlamento_pi8[ricerca]=1643) | INT 1643 | 630bf929124689d9b6ca36ff955cd794 |
 
-In rare cases, but just frequently in cantonal **consultations**, there is neither a clear technical nor business identifier. The closest to something like an identifier is then the date, which is also not necessary unique. Examples:
-
+In rare cases, but just frequently in cantonal **consultations**, there is neither a clear technical nor affair identifier. The closest to something like an identifier is then the date, which is also not necessary unique. Examples:
 * BS [Vernehmlassungen](https://www.regierungsrat.bs.ch/geschaefte/vernehmlassungen.html)
 * SO [Vernehmlassungen](https://so.ch/regierung/vernehmlassungen/)
 * JU [Projet de Lois](https://www.jura.ch/Projets-de-lois/Textes-adoptes.html)
 
 ### affair_url
 The majority of all parliamentary systems provide a URL for an affair to link to. But there are also cases where this is not so easy. Examples:
-
-* GE: Information about an affair is spread over several documents and protocols. The best URL to an affairis a search: M 2384 -> https://ge.ch/grandconseil/search?search=M+2384
+* GE: Information about an affair is spread over several documents and protocols. The best URL to an affairis a search: [M 2384](https://ge.ch/grandconseil/search?search=M+2384)
 * VD: Information to an affair is mainly provided via short snippets and links in meeting agendas (Ordre du jour):
-    * https://www.vd.ch/toutes-les-autorites/grand-conseil/seances-du-grand-conseil/point-seance/id/3019c8b6-e41c-46ab-a6f3-14e4865fbf4c/meeting/1000535
-    * Actually there is something like a affair page, but it's only available as a subsite of the author: https://www.vd.ch/toutes-les-autorites/grand-conseil/depute-e-s/detail-objet/objet/20_HQU_29/membre/308334
-* Bellinzona: Affairs have no individual link, but are part of one site: https://www.bellinzona.ch/index.php?node=876&lng=1&rif=76f856dddb
-* JU: Affairs are listet with the initial text only: https://www.jura.ch/PLT/Interventions-parlementaires-deposees/Interventions-parlementaires-deposees.html
+    * [Agenda Item 20_HQU_29](https://www.vd.ch/toutes-les-autorites/grand-conseil/seances-du-grand-conseil/point-seance/id/3019c8b6-e41c-46ab-a6f3-14e4865fbf4c/meeting/1000535)
+    * Actually there is something like a affair page for [20_HQU_29](https://www.vd.ch/toutes-les-autorites/grand-conseil/depute-e-s/detail-objet/objet/20_HQU_29/membre/308334) available as a subsite of the author
+* Bellinzona: Affairs have no individual link, but are [part of one large page](https://www.bellinzona.ch/index.php?node=876&lng=1&rif=76f856dddb).
+* JU: Affairs are [listet with the initial text only](https://www.jura.ch/PLT/Interventions-parlementaires-deposees/Interventions-parlementaires-deposees.html).
 
 ### title vs. composite title
 Some parliaments expose the title of an affair as composite of several attributes. Examples:
@@ -321,3 +318,12 @@ For many parliaments, the status of an affair is explicitly stated ([AG](https:/
 In some parliaments, however, sometimes only the initial text is published without the result ever being displayed on the same page. This is because the course of the process can ultimately only be seen in the minutes or other documents. Examples:
 
 JU: https://www.jura.ch/PLT/Interventions-parlementaires-deposees/Interventions-parlementaires-deposees.html
+
+## CONTRIBUTOR
+
+An affair has one or more contributors of either type person or type group (eg. Fraktion, Regierungsrat, Kommission, Amt). Contributors may have specific roles (eg. Erstunterzeichner, Mitunterzeichner, Sprecher). Many parliaments only provide the first 1-3 author in a structured manner.
+
+
+## DOCUMENT
+
+An affair has zero or more documents. The PDF format is still very commmon, though there's a trend that texts are directly published as structured HTML (eg. [VD](https://www.vd.ch/toutes-les-autorites/grand-conseil/seances-du-grand-conseil/point-seance/id/3019c8b6-e41c-46ab-a6f3-14e4865fbf4c/meeting/1000535)). This can be seen particularly well in the transcriptions of the Council debates, which have gained a new quality with the verbatim link to the video, which is simply not possible with PDF (eg. [BS](https://bs.recapp.ch/shareparl/))
