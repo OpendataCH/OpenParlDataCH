@@ -326,4 +326,24 @@ An affair has one or more contributors of either type person or type group (eg. 
 
 ## DOCUMENT
 
-An affair has zero or more documents. The PDF format is still very commmon, though there's a trend that texts are directly published as structured HTML (eg. [VD](https://www.vd.ch/toutes-les-autorites/grand-conseil/seances-du-grand-conseil/point-seance/id/3019c8b6-e41c-46ab-a6f3-14e4865fbf4c/meeting/1000535)). This can be seen particularly well in the transcriptions of the Council debates, which have gained a new quality with the verbatim link to the video, which is simply not possible with PDF (eg. [BS](https://bs.recapp.ch/shareparl/))
+An affair has zero or more documents. The PDF format is still very commmon for most parliaments, though there are some parliaments that have started to publish texts as HTML (eg. [VD](https://www.vd.ch/toutes-les-autorites/grand-conseil/seances-du-grand-conseil/point-seance/id/3019c8b6-e41c-46ab-a6f3-14e4865fbf4c/meeting/1000535)). 
+
+### debates
+In particular with the upcoming use of transcription software like [mediaparl.ch](https://mediaparl.ch/), that can provide links from text to video, the publishing moves rapidly away from PDF to HTML (eg. [BS](https://bs.recapp.ch/shareparl/)). May it make sense to specifiy a detailed schema for debates only?
+
+
+## EVENT
+
+
+Possible types of events:
+* Submitted (eingereicht)
+* Transfered (überwiesen)
+* Responded (beantwortet)
+* Accepted (angenommen)
+* on agenda (traktandiert)
+* Rejected (abgelehnt)
+* Withdrawn (zurückgezogen)
+
+Many parliaments use a local terminology that can be mapped to some "standard types" of events. However there are various ways where and how this information is stored and displayed (sometimes in the name of a document, as part of a session protocol, sometime in a larger event text). 
+
+
