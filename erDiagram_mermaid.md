@@ -15,6 +15,7 @@ erDiagram
     BODY ||--o{ AFFAIR : has
     BODY ||--o{ BODY : "has children"
     BODY ||--o{ GROUP : "has"
+    BODY ||--o{ MEETING : "has"
     VOTING ||--o{ EVENT : creates
     GROUP ||--o{ MEETING : "has"
     MEETING ||--o{AGENDAITEM: "has"
@@ -235,7 +236,7 @@ Unlike for canton Zurich, this boundary is often not that clear and given as aff
 ## GROUP
 Possible Group Types:
 * **party** (Partei)
-* **Parliamentary group** (Fraktion)
+* **parliamentary group** (Fraktion)
 * **council legislative** (Ständerat, Nationalrat, Kantonsrat, Landrat, Einwohnerrat, Gemeinderat, Stadtrat etc.)
 * **council executive** (Bundesrat, Regierungsrat, Gemeinderat, Stadtrat etc)
 * **committee** (Finanzkommission, Interessengruppe, Delegation etc.)
