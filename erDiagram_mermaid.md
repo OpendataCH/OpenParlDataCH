@@ -382,10 +382,10 @@ Examples:
 * BE:
     * https://www.rrgr-service.apps.be.ch/api/gr/instances/585199c5-e188-44cb-b514-f143ada83635/render?guid=685c3d93f51f44de84c40ccb55a03e9a&lang=fr
     * https://www.rrgr-service.apps.be.ch/api/gr/instances/585199c5-e188-44cb-b514-f143ada83635/render?guid=685c3d93f51f44de84c40ccb55a03e9a&lang=de
-VS:
+* VS:
     * https://parlement.vs.ch/api/fe/v1/parl_process?id=185982&locale=fr
     * https://parlement.vs.ch/api/fe/v1/parl_process?id=185982&locale=de
-GR: 
+* GR: 
     * https://ris.gr.ch/cdws/Index/GESCHAEFT/searchdetails?q=seq%3E0&l=de-CH&s=1&m=1000
 
 ## Tracking Changes & Archiving
