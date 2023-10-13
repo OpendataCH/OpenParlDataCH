@@ -23,7 +23,7 @@ erDiagram
     MEETING ||--o{DOCUMENT: "has"
 ```
 
-#  Remarks / Discussion
+#  Entities Details - Remarks, Examples, Discussion
 
 ## BODY
 
@@ -254,7 +254,7 @@ erDiagram
             }
 ```      
 
-An affair has zero or more documents. The PDF format is still very commmon for most parliaments, though there are some parliaments that have started to publish texts as HTML (eg. [VD](https://www.vd.ch/toutes-les-autorites/grand-conseil/seances-du-grand-conseil/point-seance/id/3019c8b6-e41c-46ab-a6f3-14e4865fbf4c/meeting/1000535)). 
+An affair has zero or more documents. The PDF format is still very commmon for most parliaments, though there are some parliaments that have started to publish texts as HTML (eg. [VD](https://www.vd.ch/toutes-les-autorites/grand-conseil/seances-du-grand-conseil/point-seance/id/3019c8b6-e41c-46ab-a6f3-14e4865fbf4c/meeting/1000535)). A document may also be a recording of the debate. 
 
 ### debates
 In particular with the upcoming use of transcription software like [mediaparl.ch](https://mediaparl.ch/), that can provide links from text to video, the publishing moves rapidly away from PDF to HTML (eg. [BS Frontend](https://bs.recapp.ch/shareparl/), [BS Backend JSON](https://bs.recapp.ch/viewer/api/shareparl/segments?agendaItemUid=650149ae6a0868703cc5a4e6_6&ios=false&language=de)). S
@@ -287,7 +287,7 @@ Possible types of events:
 * Rejected (abgelehnt)
 * Withdrawn (zurückgezogen)
 
-Many parliaments use a local terminology that can be mapped to some "standard types" of events. However there are various ways where and how this information is stored and displayed (sometimes in the name of a document, as part of a session protocol, sometime in a larger event text). 
+Many parliaments use a local terminology that can be mapped to some "standard types" of events. However there are various ways where and how this information is stored and displayed (sometimes in the name of a document, as part of a session protocol, sometimes in a larger event text). 
 
 ## VOTING
 ```mermaid
@@ -355,6 +355,7 @@ Example: [VS](https://parlement.vs.ch/api/fe/v1/parl_session?id=175258), [FR](ht
 
 
 ## AGENDAITEM
+
 ```mermaid
 erDiagram
         AGENDAITEM {
@@ -369,5 +370,31 @@ erDiagram
             guid agendaitem_affair_id FK
             }
 ```
+
+# General Issues
+
+## Multilingualism
+
+How to deal with languages
+
+Examples:
+
+* BE:
+    * https://www.rrgr-service.apps.be.ch/api/gr/instances/585199c5-e188-44cb-b514-f143ada83635/render?guid=685c3d93f51f44de84c40ccb55a03e9a&lang=fr
+    * https://www.rrgr-service.apps.be.ch/api/gr/instances/585199c5-e188-44cb-b514-f143ada83635/render?guid=685c3d93f51f44de84c40ccb55a03e9a&lang=de
+VS:
+    * https://parlement.vs.ch/api/fe/v1/parl_process?id=185982&locale=fr
+    * https://parlement.vs.ch/api/fe/v1/parl_process?id=185982&locale=de
+GR: 
+    * https://ris.gr.ch/cdws/Index/GESCHAEFT/searchdetails?q=seq%3E0&l=de-CH&s=1&m=1000
+
+## Tracking Changes & Archiving
+
+Some parliaments provide access to information about former members and maintain the links in the systems. Others simply remove this informations and sometimes even create 404 errors in their own systems. Examples: [VD](https://www.vd.ch/toutes-les-autorites/grand-conseil/seances-precedentes/annee-2019/seance-du-mardi-12-novembre-2019): Link to Weissert, Podio etc., [AG](https://www.ag.ch/grossrat/grweb/de/164/Ratsmitglieder?ResetBreadCrumbs=T): No information about former members available, Coverage in Timewayback Machine also weak, as the website relys heavly on cookies to access).
+
+## Collecting vs. Providing data
+
+Should the model be used to collect information from multiple parliaments, or should it be more in the direction of OParl to provide a standard for how parliaments can publish their data as OGD.
+Depending on this, more information is needed, or more thought can be given to mapped and harmonized data.
 
 
