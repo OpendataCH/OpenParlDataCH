@@ -26,8 +26,9 @@ erDiagram
 #  Remarks / Discussion
 
 ## BODY
+
 ```mermaid
-    BODY ||--o{ AFFAIR : has
+erDiagram
         BODY {
             guid body_id PK
             guid body_wikidata_id
