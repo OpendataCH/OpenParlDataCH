@@ -178,6 +178,7 @@ Most parliaments use systems that make use of at least 2 identifiers per affair.
 | BE | [2023.RRGR.288](https://www.gr.be.ch/de/start/geschaefte/geschaeftssuche/geschaeftsdetail.html?guid=ff72ae475a3c45d8bc2ac07c98eea397) | ff72ae475a3c45d8bc2ac07c98eea397 |
 | JU | [Initiatives parlementaires No 41](https://www.jura.ch/PLT/Interventions-parlementaires-deposees/Initiatives-parlementaires/Initiatives-parlementaires.html) | - |
 | LU | [A 610](https://www.lu.ch/kr/parlamentsgeschaefte/detail?ges=9607d8e286904c1c8df0aec1016ba62c) | 9607d8e286904c1c8df0aec1016ba62c |
+| GR | [No affair_key](https://ris.gr.ch/?language=de#/geschaefte/geschaeft/c94b9c4fc495459092a204d23ab64dce) | [c94b9c4fc495459092a204d23ab64dce](https://ris.gr.ch/?language=de#/geschaefte/geschaeft/c94b9c4fc495459092a204d23ab64dce) |
 
 Experience shows that the affair_key is in some cases is not unique. The same key can be given for different affair types or affairs of different legislation periods. To make it unique on the parliament level one has to add a prefix for the type or the legislation. Examples:
 | body | affair_key (original) | affair_key (adjusted for uniqueness) | external_id |
