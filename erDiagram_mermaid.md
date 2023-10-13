@@ -49,6 +49,7 @@ Unlike for canton Zurich, this boundary is often not that clear and given as aff
 
 ## GROUP
 ```mermaid
+erDiagram
         GROUP {
             guid group_id PK
             guid body_id FK
@@ -74,6 +75,7 @@ Possible Group Types:
 
 ## PERSON
 ```mermaid
+erDiagram
         PERSON {
             guid person_id PK
             string person_exernal_id
@@ -108,6 +110,7 @@ It's one thing to gather all persons from one parliament, another to disambigute
 
 ## MEMBERSHIP
 ```mermaid
+erDiagram
         MEMBERSHIP {
             guid membership_id PK
             guid membership_person_id FK
@@ -125,6 +128,7 @@ Often the start and end of a membership is not available in a structured form.
 
 ## INTEREST
 ```mermaid
+erDiagram
          INTEREST {
             guid interest_id PK
             guid interest_person_id FK
@@ -146,6 +150,7 @@ Parliaments that require their members to declare their interests sometimes prov
 
 ## AFFAIR
 ```mermaid
+erDiagram
         AFFAIR {
             guid affair_id PK
             string affair_body_id FK
@@ -217,6 +222,7 @@ JU: https://www.jura.ch/PLT/Interventions-parlementaires-deposees/Interventions-
 
 ## CONTRIBUTOR
 ```mermaid
+erDiagram
         CONTRIBUTOR {
             guid contributor_id PK
             guid contributor_person_id FK
@@ -235,6 +241,7 @@ An affair has one or more contributors of either type person or type group (eg. 
 
 ## DOCUMENT
 ```mermaid
+erDiagram
         DOCUMENT {
             guid doc_id PK
             guid affair_id FK
@@ -258,6 +265,7 @@ May it make sense to specifiy a detailed schema for debates only?
 
 ## EVENT
 ```mermaid
+erDiagram
         EVENT {
             guid event_id PK
             guid affair_id FK
@@ -283,6 +291,7 @@ Many parliaments use a local terminology that can be mapped to some "standard ty
 
 ## VOTING
 ```mermaid
+erDiagram
         VOTING {
             guid voting_id PK
             string voting_title
@@ -306,6 +315,7 @@ Examples: [VS](https://parlement.vs.ch/app/de/search/vote/185045), [SG](https://
 
 ## VOTE
 ```mermaid
+erDiagram
         VOTE {
             guid vote_id PK
             guid vote_person_id FK
@@ -319,6 +329,7 @@ The Votes are the specific yes, no, abstention, absent values of each member of 
 
 ## MEETING
 ```mermaid
+erDiagram
         MEETING {
             guid meeting_id PK
             guid meeting_group_id FK
@@ -345,6 +356,7 @@ Example: [VS](https://parlement.vs.ch/api/fe/v1/parl_session?id=175258), [FR](ht
 
 ## AGENDAITEM
 ```mermaid
+erDiagram
         AGENDAITEM {
             guid agendaitem_id PK
             guid agendaitem_meeting_id FK
@@ -357,8 +369,5 @@ Example: [VS](https://parlement.vs.ch/api/fe/v1/parl_session?id=175258), [FR](ht
             guid agendaitem_affair_id FK
             }
 ```
-
-
-
 
 
