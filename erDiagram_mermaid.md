@@ -230,10 +230,7 @@ erDiagram
             guid contributor_group_id FK
             string contributor_external_id
             string contributor_name
-            string doc_type
-            int doc_version
-            string doc_language
-            string doc_category
+
             }
 ```      
 
