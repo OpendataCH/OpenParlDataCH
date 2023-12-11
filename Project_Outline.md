@@ -12,14 +12,14 @@ Memorandum of Agreement, Example: ROR: https://ror.org/documents/ROR-Memorandum-
 
 ## Server, Database, Website
 
-* Setup 2 Server
- * Test
- * Productive
-* Maria DB or Postgres DB (available as Docker Image)
-* [Apache Hop](https://hop.apache.org/) (available as Docker Image) - For Crawling and ETL
-* [Splash](https://splash.readthedocs.io/en/stable/index.html) - For Crawling (Rendering JS)
-* CMS Software TBD (Wordpress?) - For Website
-* API Software TBD - For Offering API
+- Setup 2 Server
+	- Test
+	- Productive
+- Maria DB or Postgres DB (available as Docker Image)
+- [Apache Hop](https://hop.apache.org/) (available as Docker Image) - For Crawling and ETL
+- [Splash](https://splash.readthedocs.io/en/stable/index.html) - For Crawling (Rendering JS)
+- CMS Software TBD (Wordpress?) - For Website
+- API Software TBD - For Offering API
 
 ## Crawling / Import Pipelines
 
@@ -38,7 +38,7 @@ Set up an API that provides access to the data in the Pool.
 
 - Create a portal where the data can be searched and filtered by entities: 
 
-![Search Portal Affairs](https://new.express.adobe.com/webpage/7e9hxAWjiltVB/resources/388d53b3-2aaf-404c-b462-8aeada998b28-2560px?asset_id=388d53b3-2aaf-404c-b462-8aeada998b28&size=2560)
+![Search Portal Affairs](Mockup_Portal.png)
 
 ## Data Quality Issues & Harmonizations
 
@@ -46,14 +46,18 @@ Set up an API that provides access to the data in the Pool.
 
 In 2022, the Federal Statistical Office asked in a [survey](https://www.bfs.admin.ch/bfs/de/home/dienstleistungen/ogd/dokumentation.gnpdetail.2022-0702.html) in which subject area too little data is available as OGD (Open Government Data). The area of "politics, political transparency" was mentioned most frequently. Parliamentary data was explicitly mentioned in 5% of the responses. As of now only a handful of parliaments (e.g. [BS](https://data.bs.ch/explore/?sort=modified&q=grosser+rat&refine.keyword=Grosser+Rat), [TG](https://data.tg.ch/explore/?q=Grossen+Rat&sort=title&refine.keyword=Grosser+Rat&refine.keyword=Kantonsparlament+), and [ZH](https://opendata.swiss/fr/dataset/web-service-des-geschaftsverwaltungssystems-des-kantonsrates-des-kantons-zurich)) publish their data explicitly as Open Data. 
 
-And if they do so, the data is still heterogenous as there is no standard format how to publish parliamentary data. Although some cantons and cities use the same software as a council information system (e.g. [CMI](https://cmiag.ch/)), these instances are heavily customised to local needs (type of affairs, parliamentary procedures).
+And if they do so, the data is still heterogenous as there is no standard format how to publish parliamentary data. Although some cantons and cities use the same software as a council information system, e.g. [CMI](https://cmiag.ch/) typlically hosted by [i-web.ch](https://www.i-web.ch/gemweb), these instances are heavily customised to local needs (eg. type of affairs, parliamentary procedures) and offer little standardisation on closer examination.
 
 One aim of this project is also to seek dialogue with parliaments in order to
 
-- 1. put the publication of open data on the agenda and
-- 2. to explore the interest and possibilities of defining a common output format for publishing parliamentary data. 
+- a) put the publication of open data on the agenda and
+- b) to explore the interest and possibilities of defining a common output format for publishing parliamentary data. 
 
 The planned creation of an open portal for all Swiss parliamentary data may also create a positive incentive for parliaments to make data available in a standardized format, as this creates direct and tangible added value and benefits.
+
+However, without being a software service provider for the cantons and cities ourselves or without a mandate to ensure harmonisation, our efforts can "only" be an offer that depends heavily on the will and capacities of the parliaments. It can be assumed that hardly all parliaments will make their data available as open data and in standardised form in the foreseeable future.
+
+Accordingly, the idea is to move forward with an "alliance of the willing" so that they make their data available in a harmonised format and standard, i.e. open data. To this end, the open portal will develop a general import for the newly defined standard, which will replace the previous crawling import. Crawling will however remain in place for the other parliaments. 
 
 
 ### Persons
@@ -93,8 +97,3 @@ The need for automatic classification is currently emerging in various places:
 - The Digital Administration Switzerland publishes [a list](https://www.digitale-verwaltung-schweiz.ch/aktuelles/politische-geschaefte) with national and cantonal affairs related to digitalization. This list is generate from POLITmonitor, where the subject "digitalization" is added manually to an affair.
 
 In order to save resources and enable standardised clustering across several parliaments, an open service should be created that on a given input (documents of political affairs) can provide standardized or ad hoc generated subjects.
-
-
-
- 
-
