@@ -3,7 +3,10 @@
 
 ## Organisational Setup
 
+
 Formation of an association?
+
+- Sponsorship 
 
 Join existing structure: politools.net, opendata.ch?
 
@@ -39,6 +42,21 @@ Set up an API that provides access to the data in the Pool.
 - Create a portal where the data can be searched and filtered by entities: 
 
 ![Search Portal Affairs](Mockup_Portal.png)
+
+### Fulltext
+
+The Portal will provide a fulltext search to metadata and indexed documents.  
+
+### Alerts
+### List
+### Label
+### Calendar Functions
+- See upcoming affairs on the agenda.
+### AI Summaries of affairs 
+- 
+### Visualizations
+
+
 
 ## Data Quality Issues & Harmonizations
 
@@ -97,3 +115,16 @@ The need for automatic classification is currently emerging in various places:
 - The Digital Administration Switzerland publishes [a list](https://www.digitale-verwaltung-schweiz.ch/aktuelles/politische-geschaefte) with national and cantonal affairs related to digitalization. This list is generate from POLITmonitor, where the subject "digitalization" is added manually to an affair.
 
 In order to save resources and enable standardised clustering across several parliaments, an open service should be created that on a given input (documents of political affairs) can provide standardized or ad hoc generated subjects.
+
+
+
+## Business Model
+
+Intial Phase
+
+- Intital Grant Mercator?
+- Intital Grant DVS?
+
+Regular Phase
+
+- Sponsorships from Cantons & Cities
