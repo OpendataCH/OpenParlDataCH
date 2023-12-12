@@ -1,17 +1,11 @@
 # Project Outline
 
-
 ## Organisational Setup
 
-
 Formation of an association?
-
 - Sponsorship 
-
 Join existing structure: politools.net, opendata.ch?
-
 Memorandum of Agreement, Example: ROR: https://ror.org/documents/ROR-Memorandum-of-Agreement-2022.pdf
-
 
 ## Server, Database, Website
 
@@ -35,7 +29,6 @@ Memorandum of Agreement, Example: ROR: https://ror.org/documents/ROR-Memorandum-
 ## Set Up API
 
 Set up an API that provides access to the data in the Pool.
-
 
 ## Portal / GUI
 
@@ -136,9 +129,9 @@ In order to save resources and enable standardised clustering across several par
 Intial Phase
 
 - Intital Grant [Mercator](https://www.stiftung-mercator.ch/demokratie)?
-- Intital Grant [DVS](digitale-verwaltung-schweiz.ch)
+- Intital Grant [DVS](https://www.digitale-verwaltung-schweiz.ch/ausschreibung2024)
 
 Regular Phase
 
 - Sponsorships from Cantons & Cities
-- Features for Organisations (sharing lists, labels, comments within a 
+- Features for Organisations (sharing lists, labels, comments?)
