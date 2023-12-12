@@ -29,6 +29,10 @@ Memorandum of Agreement, Example: ROR: https://ror.org/documents/ROR-Memorandum-
 ## Set Up API
 
 Set up an API that provides access to the data in the Pool.
+Details to be defined..
+
+- [ER Diagram](erDiagram_mermaid.md)
+- Example [JSON-Export of cantonal consulations ](https://prod.politmonitor.ch/export/consultations/)
 
 ## Portal / GUI
 
