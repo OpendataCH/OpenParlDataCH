@@ -48,15 +48,28 @@ Set up an API that provides access to the data in the Pool.
 The Portal will provide a fulltext search to metadata and indexed documents.  
 
 ### Alerts
-### List
-### Label
+
+On the detail page of an affair, users can subscribe for updates of a single affair.
+
+### Lists
+
+Users can create can organize affairs in own lists. (Requires a login)
+
+### Labels & Comments
+
+Users can add own labels and comments to affairs (Requires Login). The labels and comments are either stored only privately or publicly.
+
 ### Calendar Functions
-- See upcoming affairs on the agenda.
-### AI Summaries of affairs 
-- 
+
+See upcoming affairs on the agenda
+
+### AI Summaries of affairs
+
+Add a Summary of an affair given the metadata and documents generated with AI
+
 ### Visualizations
 
-
+Offer Visualization about the whole dataset with drilldowns to invidiual parliaments
 
 ## Data Quality Issues & Harmonizations
 
@@ -122,9 +135,10 @@ In order to save resources and enable standardised clustering across several par
 
 Intial Phase
 
-- Intital Grant Mercator?
-- Intital Grant DVS?
+- Intital Grant [Mercator](https://www.stiftung-mercator.ch/demokratie)?
+- Intital Grant [DVS](digitale-verwaltung-schweiz.ch)
 
 Regular Phase
 
 - Sponsorships from Cantons & Cities
+- Features for Organisations (sharing lists, labels, comments within a 
