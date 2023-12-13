@@ -1,12 +1,5 @@
 # Project Outline
 
-## Organisational Setup
-
-Formation of an association?
-- Sponsorship 
-Join existing structure: politools.net, opendata.ch?
-Memorandum of Agreement, Example: ROR: https://ror.org/documents/ROR-Memorandum-of-Agreement-2022.pdf
-
 ## Server, Database, Website
 
 - Setup 2 Server
@@ -22,11 +15,11 @@ Memorandum of Agreement, Example: ROR: https://ror.org/documents/ROR-Memorandum-
 
 - Create initial database structure (Stage and Pool)
 - Set up workflow to import/crawl data from parliaments on a daily frequency.
-- Migrate existing pipelines from POLITmonitor for Pentaho Data Integration to Apache Hop.
+- Migrate existing pipelines (parlament.ch, all cantons, 41 cities) from POLITmonitor for Pentaho Data Integration to Apache Hop.
 - Remove as far as possible or as far as necessary adjustments in the ETL process just relevant for POLITmonitor.
 
 
-## Set Up API
+## Set Up & Devlop API
 
 Set up an API that provides access to the data in the Pool.
 Details to be defined..
@@ -36,7 +29,7 @@ Details to be defined..
 
 ## Portal / GUI
 
-- Create a portal where the data can be searched and filtered by entities: 
+- Create a portal where the data from the API can be searched and filtered by entities: 
 
 ![Search Portal Affairs](Mockup_Portal.png)
 
@@ -127,7 +120,6 @@ The need for automatic classification is currently emerging in various places:
 In order to save resources and enable standardised clustering across several parliaments, an open service should be created that on a given input (documents of political affairs) can provide standardized or ad hoc generated subjects.
 
 
-
 ## Business Model
 
 Intial Phase
@@ -139,3 +131,11 @@ Regular Phase
 
 - Sponsorships from Cantons & Cities
 - Features for Organisations (sharing lists, labels, comments?)
+
+
+## Organisational Setup
+
+Working Group part of OpenData.ch
+- Governance TBD
+- Purpose TBD
+
