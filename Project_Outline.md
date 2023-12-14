@@ -19,7 +19,7 @@
 - Remove as far as possible or as far as necessary adjustments in the ETL process just relevant for POLITmonitor.
 
 
-## Set Up & Devlop API
+## Set Up & Develop API
 
 Set up an API that provides access to the data in the Pool.
 Details to be defined..
