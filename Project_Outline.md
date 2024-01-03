@@ -25,7 +25,7 @@ Set up an API that provides access to the data in the Pool.
 Details to be defined..
 
 - [ER Diagram](erDiagram_mermaid.md)
-- Example [JSON-Export of cantonal consulations ](https://prod.politmonitor.ch/export/consultations/)
+- Example [JSON-Export of Affairs, Persons, Consultations ](https://prod.politmonitor.ch/export/)
 
 ## Portal / GUI
 
