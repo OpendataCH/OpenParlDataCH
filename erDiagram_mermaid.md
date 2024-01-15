@@ -390,6 +390,10 @@ Examples:
 
 Some parliaments provide access to information about former members and maintain the links in the systems. Others simply remove this informations and sometimes even create 404 errors in their own systems. Examples: [VD](https://www.vd.ch/toutes-les-autorites/grand-conseil/seances-precedentes/annee-2019/seance-du-mardi-12-novembre-2019): Link to Weissert, Podio etc., [AG](https://www.ag.ch/grossrat/grweb/de/164/Ratsmitglieder?ResetBreadCrumbs=T): No information about former members available, Coverage in Timewayback Machine also weak, as the website relys heavly on cookies to access).
 
+## History
+
+How to capture changes? Version of Documents
+
 ## Collecting vs. Providing data
 
 Should the model be used to collect information from multiple parliaments, or should it be more in the direction of OParl to provide a standard for how parliaments can publish their data as OGD.
